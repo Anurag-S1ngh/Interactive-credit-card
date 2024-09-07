@@ -1,6 +1,6 @@
-# Credit Card Flip Animation
+# Interactive Credit Card
 
-A visually interactive credit card with a flip effect created using HTML and CSS. This project demonstrates the use of 3D transforms and CSS animations to create a realistic credit card flip effect.
+A visually interactive credit card with a flip effect created using only HTML and CSS. This project demonstrates the use of CSS animations and 3D transforms to create a realistic credit card flip effect.
 
 ## Features
 
@@ -12,6 +12,10 @@ A visually interactive credit card with a flip effect created using HTML and CSS
 
 - **HTML:** Structure of the credit card.
 - **CSS:** Styling and animations, including 3D transforms.
+
+## Live Demo
+
+You can view the interactive credit card in action here: [Interactive Credit Card](https://anurag-s1ngh.github.io/Interactive-credit-card/)
 
 ## Usage
 
