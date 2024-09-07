@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h1,h2,h3,h4,p{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "Inconsolata", monospace;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px;
+}
+
+.card_container{
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    height: 350px;
+    width: 600px;
+    background-color: rgba(61, 42, 29, 0.4);
+    border-radius: 3rem;
+    box-shadow: 0 8px 32px white;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    filter: none;
+    padding: 2rem 3rem;
+    margin-top: 1rem;
+}
+
+.master_card{
+    height: 60px;
+}
+
+.chip{
+    height: 50px;
+}
+
+.num_container{
+    padding: 2rem 3rem;
+    padding-bottom: 0;
+}
+
+.num_container h3{
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.name_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    padding-top: 1rem;
+}
+
+.name{
+    align-self: end;
+}
+
+.ball_1, .ball_2 {
+    position: absolute;
+    z-index: 1; /* Lower than the card_container */
+}
+
+.ball_1 {
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to left,#f5f5f5, #9198e5);
+    border-radius: 50%;
+    top: 11rem;
+    left: 1rem;
+}
+
+.ball_2 {
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to right,#ffffff, #9198e5);
+    border-radius: 50%;
+    bottom: 13rem;
+    right: 2rem;
+}
+
+.card_container:hover{
+    transform: rotateY(180deg);
+    .title{
+        display: none;
+    }
+    .num_container{
+        display: none;
+    }
+    .name_container{
+        display: none;
+    }
+    .o_title,
+    .black,
+    .scratch_container,
+    .description{
+        opacity: 1;
+        display: block;
+    }
+}
+
+.title{
+    transition: 1s;
+}
+.num_container{
+    transition: 1s;
+}
+.name_container{
+    transition: 1s;
+}
+
+.o_title{
+    padding: 1.5rem 3rem;
+}
+
+.black{
+    background-color: black;
+    height: 60px;
+    margin-bottom: 2rem;
+}
+
+.scratch{
+    background-image: repeating-linear-gradient(#fff, #fff 3px, #efefef 0px, #efefef 9px);
+    height: 60px;
+    width: 70%;
+    border-radius: 0.5rem;
+    margin-left: 3rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cvv{
+    position: absolute;
+    right: -3.5rem;
+    background-color: white;
+    padding: 7px 10px;
+    z-index: -1;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.cvv h2{
+    color: black;
+}
+
+.description{
+    padding: 2rem 3rem;
+}
+
+.o_title h4{
+    font-size: 13px;
+
+}
+
+.description h4{
+    font-size: 0.9rem;
+}
+
+.o_title,
+.black,
+.scratch_container,
+.description{
+    transition: display 2s;
+    display: none;
+    transform: rotateY(180deg);
+}
+
+.ball_1 {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to left, #f5f5f5, #9198e5);
+    border-radius: 50%;
+    top: 30%;
+    left: 35%; /* Align to the left of the .card_container */
+    transform: translate(-50%, -50%); /* Center the ball */
+    z-index: 1;
+}
+
+.ball_2 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to right, #ffffff, #9198e5);
+    border-radius: 50%;
+    bottom: 30%;
+    right: 40%; /* Align to the right of the .card_container */
+    transform: translate(50%, 50%); /* Center the ball */
+    z-index: 1;
+}
