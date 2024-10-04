@@ -29,7 +29,3 @@ Feel free to fork the repository and submit pull requests with improvements or a
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Thanks to the open-source community for providing inspiration and resources.
